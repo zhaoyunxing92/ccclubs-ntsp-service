@@ -1,4 +1,4 @@
-package com.ccclubs.ntsp.ccclubsntspservice;
+package com.ccclubs.ntsp.server;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

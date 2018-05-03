@@ -1,4 +1,4 @@
-package com.ccclubs.ntsp.ccclubsntspservice.config;
+package com.ccclubs.ntsp.server.config;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
@@ -12,7 +12,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * @author sunny
- * @class: com.ccclubs.ntsp.ccclubsntspservice.config.SwaggerConfig
+ * @class: SwaggerConfig
  * @date: 2018-05-03 11:14
  * @des: swagger 配置
  */
@@ -24,7 +24,7 @@ public class SwaggerConfig {
     return new Docket(DocumentationType.SWAGGER_2)
         .apiInfo(apiInfo())
         .select()
-        .apis(RequestHandlerSelectors.basePackage("com.ccclubs.ntsp.ccclubsntspservice.controller"))
+        .apis(RequestHandlerSelectors.basePackage("com.ccclubs.ntsp.server.controller"))
         .paths(PathSelectors.any())
         .build();
   }

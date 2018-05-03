@@ -1,9 +1,9 @@
-package com.ccclubs.ntsp.ccclubsntspservice.config;
+package com.ccclubs.ntsp.server.config;
 
 import org.springframework.context.annotation.Import;
 /**
  * @author sunny
- * @class: com.ccclubs.ntsp.ccclubsntspservice.config.NewTspConfig
+ * @class: NewTspConfig
  * @date: 2018-05-03 11:14
  * @des: 配置模块
  */
