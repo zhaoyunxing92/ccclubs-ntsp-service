@@ -9,5 +9,5 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
  * @des: 统一异常处理
  */
 @ControllerAdvice
-public class NtspGlobalExceptionHandler {
+public class NtspAppGlobalExceptionHandler {
 }

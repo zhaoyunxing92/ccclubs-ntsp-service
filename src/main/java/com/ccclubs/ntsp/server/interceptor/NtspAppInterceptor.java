@@ -9,11 +9,11 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author sunny
- * @class: com.ccclubs.ntsp.server.interceptor.NtspInterceptor
+ * @class: com.ccclubs.ntsp.server.interceptor.NtspAppInterceptor
  * @date: 2018-05-04 0:34
  * @des: controller层拦截器
  */
-public class NtspInterceptor implements HandlerInterceptor {
+public class NtspAppInterceptor implements HandlerInterceptor {
   private static final String[] EXCLUDES = {/*"/swagger-resources", "/configuration/security", "/v2/api-docs", "/configuration/ui",*/};
 
   @Override
