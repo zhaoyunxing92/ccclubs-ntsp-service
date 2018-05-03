@@ -1,0 +1,4 @@
+server:
+  port: 8830
+swagger:
+    enable: true
