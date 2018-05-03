@@ -9,6 +9,12 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+/**
+ * @author sunny
+ * @class: com.ccclubs.ntsp.ccclubsntspservice.config.SwaggerConfig
+ * @date: 2018-05-03 11:14
+ * @des: swagger 配置
+ */
 @EnableSwagger2
 public class SwaggerConfig {
   @Bean
