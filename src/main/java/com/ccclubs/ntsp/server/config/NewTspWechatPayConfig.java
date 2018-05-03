@@ -7,4 +7,5 @@ package com.ccclubs.ntsp.server.config;
  * @des:
  */
 public class NewTspWechatPayConfig {
+  private String appId;
 }
