@@ -1,4 +1,11 @@
 server:
   port: 8800
 swagger:
-    enable: true
+  enable: true
+ntsp:
+  pay:
+    wechat:
+      appId:
+      mchId:
+    alipay:
+      appId:
