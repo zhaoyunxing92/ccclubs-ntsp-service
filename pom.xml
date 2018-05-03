@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.ccclubs.ntsp</groupId>
-    <artifactId>ccclubs-ntsp-service</artifactId>
+    <artifactId>ccclubs-ntsp-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
