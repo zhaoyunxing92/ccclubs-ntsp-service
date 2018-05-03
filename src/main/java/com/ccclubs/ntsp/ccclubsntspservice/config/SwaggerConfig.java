@@ -1,5 +1,6 @@
 package com.ccclubs.ntsp.ccclubsntspservice.config;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
@@ -16,6 +17,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @des: swagger 配置
  */
 @EnableSwagger2
+@ConditionalOnProperty(prefix = "swagger",value = {"enable"},havingValue = "true")
 public class SwaggerConfig {
   @Bean
   public Docket createRestApi() {
