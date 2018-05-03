@@ -6,5 +6,5 @@ package com.ccclubs.ntsp.server.config;
  * @date: 2018-05-03 18:25
  * @des:
  */
-public class NewTspPayConfig {
+public class NewTspWechatPayConfig {
 }
