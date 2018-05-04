@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 
 /**
  * @author sunny
- * @class: com.ccclubs.ntsp.server.handler.NtspGlobalExceptionHandler
+ * @class: com.ccclubs.ntsp.server.handler.NtspAppGlobalExceptionHandler
  * @date: 2018-05-04 0:19
  * @des: 统一异常处理
  */
