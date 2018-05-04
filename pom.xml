@@ -34,6 +34,7 @@
         <swagger.version>2.2.2</swagger.version>
         <!--跳过测试-->
         <skipTests>true</skipTests>
+        <gson.version>2.6.2</gson.version>
     </properties>
 
     <dependencies>
@@ -50,6 +51,11 @@
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
             <version>${swagger.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${gson.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
