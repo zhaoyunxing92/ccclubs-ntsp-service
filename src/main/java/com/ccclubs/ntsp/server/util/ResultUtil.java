@@ -53,12 +53,13 @@ public class ResultUtil {
    * 错误
    *
    * @param resultEnum
-   * @param errors
+   * @param msg
    * @return
    */
-  public static Result error(ResultEnum resultEnum, List<ObjectError> errors) {
+  public static Result error(ResultEnum resultEnum, List<ObjectError> msg) {
     Result result = new Result();
-
+    result.setSuccess(false);
+    result.setMessage(errorsToString(msg));
     // result.setData (null);
     return result;
   }

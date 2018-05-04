@@ -1,6 +1,7 @@
 package com.ccclubs.ntsp.server.controller.pay.form;
 
 import com.ccclubs.ntsp.server.common.form.NtspBaseForm;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.hibernate.validator.constraints.Range;
@@ -27,7 +28,7 @@ public class PayForm extends NtspBaseForm<String> {
 
   @NotEmpty(message = "用户名必填")
   @Length(max = 20, min = 6, message = "用户名在{min}~{max}之间")
-  private String usernname;
+  private String username;
 
 
   public Long getMoney() {
@@ -46,11 +47,11 @@ public class PayForm extends NtspBaseForm<String> {
     this.time = time;
   }
 
-  public String getUsernname() {
-    return usernname;
+  public String getUsername() {
+    return username;
   }
 
-  public void setUsernname(String usernname) {
-    this.usernname = usernname;
+  public void setUsername(String username) {
+    this.username = username;
   }
 }
