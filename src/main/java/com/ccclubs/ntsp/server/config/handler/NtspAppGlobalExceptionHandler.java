@@ -6,6 +6,7 @@ import com.ccclubs.ntsp.server.util.ResultUtil;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.BindException;
+import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -20,13 +21,11 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  * @des: 统一异常处理
  */
 @ControllerAdvice
+@ResponseBody
 public class NtspAppGlobalExceptionHandler {
-
-  @ExceptionHandler({BindException.class, MethodArgumentNotValidException.class, HttpMessageNotReadableException.class})
   // 定义要处理的异常类
-  @ResponseBody
+  @ExceptionHandler({BindException.class, MethodArgumentNotValidException.class, HttpMessageNotReadableException.class})
   @ResponseStatus(HttpStatus.BAD_REQUEST)
-  @SuppressWarnings("rawtypes")
   public Result validExceptionHandle(Exception ex) {
 
     if (ex instanceof BindException) {
@@ -43,5 +42,12 @@ public class NtspAppGlobalExceptionHandler {
       return ResultUtil.error(ResultEnum.PARAMETER_ERROR, ex.getMessage());
     }
 
+  }
+
+  //org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+  @ExceptionHandler({HttpRequestMethodNotSupportedException.class})
+  @ResponseStatus(HttpStatus.BAD_REQUEST)
+  public Result ExceptionHandle(HttpRequestMethodNotSupportedException ex) {
+    return ResultUtil.error(ResultEnum.PARAMETER_ERROR, ex.getMessage());
   }
 }

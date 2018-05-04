@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
  * @des: controller层拦截器
  */
 public class NtspAppInterceptor implements HandlerInterceptor {
-  private static final String[] EXCLUDES = {/*"/swagger-resources", "/configuration/security", "/v2/api-docs", "/configuration/ui",*/};
+  private static final String[] EXCLUDES = {/*"/swagger-resources", "/configuration/security", "/v2/api-docs", "/configuration/ui",*/"/pay","/error"};
 
   @Override
   public boolean preHandle(HttpServletRequest req, HttpServletResponse res, Object handler) throws Exception {

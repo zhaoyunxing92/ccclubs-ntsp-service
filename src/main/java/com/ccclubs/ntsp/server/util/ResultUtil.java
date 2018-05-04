@@ -67,12 +67,13 @@ public class ResultUtil {
    * 错误
    *
    * @param resultEnum
-   * @param error
+   * @param msg
    * @return
    */
-  public static Result error(ResultEnum resultEnum, String error) {
+  public static Result error(ResultEnum resultEnum, String msg) {
     Result result = new Result();
-
+    result.setSuccess(false);
+    result.setMessage(msg);
     // result.setData (null);
     return result;
   }
@@ -86,7 +87,8 @@ public class ResultUtil {
    */
   public static Result error(Integer code, String msg) {
     Result result = new Result();
-
+    result.setSuccess(false);
+    result.setMessage(msg);
     return result;
   }
 

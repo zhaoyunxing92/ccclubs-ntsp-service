@@ -6,6 +6,7 @@ import com.ccclubs.ntsp.server.controller.pay.form.PayForm;
 import com.ccclubs.ntsp.server.service.NTspPayService;
 import com.ccclubs.ntsp.server.util.ResultUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,13 +18,13 @@ import org.springframework.web.bind.annotation.RestController;
  * @des:
  */
 @RestController
-@RequestMapping("pay")
+@RequestMapping("/pay")
 public class NtspAppPayController {
   @Autowired
   private NTspPayService nTspPayService;
 
   @PostMapping("/wechat")
-  public Result wechatPay(PayForm form) {
+  public Result wechatPay(@Validated PayForm form) {
     return ResultUtil.success(ResultEnum.PAYSUCCESS);
   }
 }
