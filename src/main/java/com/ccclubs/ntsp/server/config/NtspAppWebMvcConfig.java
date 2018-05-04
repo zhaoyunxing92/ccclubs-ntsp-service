@@ -1,6 +1,6 @@
 package com.ccclubs.ntsp.server.config;
 
-import com.ccclubs.ntsp.server.interceptor.NtspAppInterceptor;
+import com.ccclubs.ntsp.server.config.interceptor.NtspAppInterceptor;
 import org.springframework.http.CacheControl;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;

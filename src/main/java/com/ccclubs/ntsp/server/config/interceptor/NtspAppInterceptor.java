@@ -1,6 +1,5 @@
-package com.ccclubs.ntsp.server.interceptor;
+package com.ccclubs.ntsp.server.config.interceptor;
 
-import org.springframework.web.servlet.AsyncHandlerInterceptor;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -9,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author sunny
- * @class: com.ccclubs.ntsp.server.interceptor.NtspAppInterceptor
+ * @class: com.ccclubs.ntsp.server.config.interceptor.NtspAppInterceptor
  * @date: 2018-05-04 0:34
  * @des: controller层拦截器
  */

@@ -9,7 +9,11 @@ package com.ccclubs.ntsp.server.common.enums;
 public enum ResultEnum {
 
 
-  PAYSUCCESS(0, "支付成功"),;
+  PAYSUCCESS(0, "支付成功"),
+
+  PARAMETER_ERROR(100, "参数异常！"),
+
+  SPRING_MVC_PARAMETER_IS_NULL_ERROR(200, "请求体为空！");
 
   private Integer code;
   private String msg;
