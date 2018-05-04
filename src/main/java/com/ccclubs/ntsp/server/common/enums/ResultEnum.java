@@ -1,13 +1,37 @@
 package com.ccclubs.ntsp.server.common.enums;
 
-import java.io.Serializable;
-
 /**
  * @author sunny
  * @class: com.ccclubs.ntsp.server.common.enums.ResultEnum
  * @date: 2018-05-04 11:04
  * @des:
  */
-public class ResultEnum implements Serializable {
-  private static final long serialVersionUID = 5389890854920780152L;
+public enum ResultEnum {
+
+
+  PAYSUCCESS(0, "支付成功"),;
+
+  private Integer code;
+  private String msg;
+
+  ResultEnum(Integer code, String msg) {
+    this.code = code;
+    this.msg = msg;
+  }
+
+  public Integer getCode() {
+    return code;
+  }
+
+  public String getMsg() {
+    return msg;
+  }
+
+  public void setCode(Integer code) {
+    this.code = code;
+  }
+
+  public void setMsg(String msg) {
+    this.msg = msg;
+  }
 }

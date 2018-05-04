@@ -1,7 +1,10 @@
 package com.ccclubs.ntsp.server.controller.pay;
 
+import com.ccclubs.ntsp.server.common.enums.ResultEnum;
+import com.ccclubs.ntsp.server.common.result.Result;
 import com.ccclubs.ntsp.server.controller.pay.from.PayFrom;
 import com.ccclubs.ntsp.server.service.NTspPayService;
+import com.ccclubs.ntsp.server.util.ResultUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +23,7 @@ public class NtspAppPayController {
   private NTspPayService nTspPayService;
 
   @PostMapping("/wechat")
-  public String wechatPay(PayFrom from) {
-    return "";
+  public Result wechatPay(PayFrom from) {
+    return ResultUtil.success(ResultEnum.PAYSUCCESS);
   }
 }
