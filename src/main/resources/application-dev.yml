@@ -10,3 +10,6 @@ ntsp:
     alipay:
       appId:
       key:
+logging:
+  level:
+    com.ccclubs.ntsp.server: debug
