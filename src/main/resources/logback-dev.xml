@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn">
+    <Appenders>
+        <!--这个输出控制台的配置-->
+        <Console name="console" target="SYSTEM_OUT">
+            <!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->
+            <ThresholdFilter level="trace" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="%d{MM-dd HH:mm:ss} [%-5level] [%-5t] %logger{50} - %msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <root level="info">
+            <appender-ref ref="console"/>
+        </root>
+    </Loggers>
+</Configuration>
