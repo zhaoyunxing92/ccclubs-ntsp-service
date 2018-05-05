@@ -1,4 +1,14 @@
 server:
-  port: 8830
+  port: 8820
+logging:
+  config: classpath:logback-dev.xml
 swagger:
-    enable: true
+  enable: true
+ntsp:
+  pay:
+    wechat:
+      appId:
+      mchId:
+    alipay:
+      appId:
+      key:

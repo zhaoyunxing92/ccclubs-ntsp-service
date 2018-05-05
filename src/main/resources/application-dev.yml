@@ -1,5 +1,7 @@
 server:
   port: 8800
+logging:
+  config: classpath:logback-dev.xml
 swagger:
   enable: true
 ntsp:
@@ -10,6 +12,3 @@ ntsp:
     alipay:
       appId:
       key:
-logging:
-  level:
-    com.ccclubs.ntsp.server: debug
