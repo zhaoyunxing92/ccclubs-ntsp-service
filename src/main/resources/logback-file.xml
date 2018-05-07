@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <!--<include resource="org/springframework/boot/logging/logback/base.xml"/>-->
+    <property name="log_dir" value="./logs"/>
+    <property name="maxHistory" value="15"/>
+
+    <!--控制台输出info级别-->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="error" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log_dir}/ntsp-error.log</file>
+        <!--<filter class="ch.qos.logback.classic.filter.LevelFilter">-->
+        <!--<level>ERROR</level>-->
+        <!--<onMatch>ACCEPT</onMatch>-->
+        <!--<onMismatch>DENY</onMismatch>-->
+        <!--</filter>-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${log_dir}/%d{yyyy-MM-dd}/zip/ntsp-error.%i.gz</fileNamePattern>
+            <maxHistory>${maxHistory}</maxHistory>
+            <maxFileSize>10MB</maxFileSize>
+            <totalSizeCap>20GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--<appender name="warn" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+    <!--<filter class="ch.qos.logback.classic.filter.LevelFilter">-->
+    <!--<level>WARN</level>-->
+    <!--<onMatch>ACCEPT</onMatch>-->
+    <!--<onMismatch>DENY</onMismatch>-->
+    <!--</filter>-->
+    <!--<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">-->
+    <!--<fileNamePattern>${log_dir}/%d{yyyy-MM-dd}/ntsp-debug-log.log</fileNamePattern>-->
+
+    <!--<maxHistory>${maxHistory}</maxHistory>-->
+    <!--<maxFileSize>1MB</maxFileSize>-->
+    <!--<totalSizeCap>1GB</totalSizeCap>-->
+    <!--</rollingPolicy>-->
+    <!--<encoder>-->
+    <!--<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>-->
+    <!--</encoder>-->
+    <!--</appender>-->
+
+    <!--<appender name="info" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+    <!--<filter class="ch.qos.logback.classic.filter.LevelFilter">-->
+    <!--<level>INFO</level>-->
+    <!--<onMatch>ACCEPT</onMatch>-->
+    <!--<onMismatch>DENY</onMismatch>-->
+    <!--</filter>-->
+
+    <!--<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">-->
+    <!--<fileNamePattern>${log_dir}/%d{yyyy-MM-dd}/zip/ntsp-error-log.log.zip</fileNamePattern>-->
+    <!--<maxFileSize>1MB</maxFileSize>-->
+    <!--</triggeringPolicy>-->
+    <!--<encoder>-->
+    <!--<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %m%n</pattern>-->
+    <!--</encoder>-->
+    <!--</appender>-->
+
+    <!--<appender name="debug" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+    <!--<filter class="ch.qos.logback.classic.filter.LevelFilter">-->
+    <!--<level>DEBUG</level>-->
+    <!--<onMatch>ACCEPT</onMatch>-->
+    <!--<onMismatch>DENY</onMismatch>-->
+    <!--</filter>-->
+    <!--<triggeringPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+    <!--<fileNamePattern>${log_dir}/%d{yyyy-MM-dd}/zip/ntsp-error-log.log</fileNamePattern>-->
+    <!--<maxFileSize>1MB</maxFileSize>-->
+    <!--</triggeringPolicy>-->
+    <!--<encoder>-->
+    <!--<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>-->
+    <!--</encoder>-->
+    <!--</appender>-->
+
+    <!--输出到mysql数据库的appender配置     -->
+    <!--<appender name="db" class="ch.qos.logback.classic.db.DBAppender">-->
+    <!--<connectionSource-->
+    <!--class="ch.qos.logback.core.db.DriverManagerConnectionSource">-->
+    <!--<driverClass>com.mysql.jdbc.Driver</driverClass>-->
+    <!--<url>jdbc:mysql://120.77.222.42:3306/logback_member?characterEncoding=utf8</url>-->
+    <!--<user>root</user>-->
+    <!--<password>a123456789</password>-->
+    <!--</connectionSource>-->
+    <!--</appender>-->
+
+    <!--<logger name="org.hibernate" level="error"/>-->
+    <!--<logger name="org.springframework" level="error"/>-->
+    <!--<logger name="org.apache.zookeeper" level="error"/>-->
+    <!--<logger name="com.netflix" level="error"/>-->
+    <!--<Loggers>-->
+    <!--<root level="all">-->
+    <!--&lt;!&ndash;<appender-ref ref="db"/>&ndash;&gt;-->
+    <!--<appender-ref ref="console"/>-->
+    <!--&lt;!&ndash;<appender-ref ref="info"/>&ndash;&gt;-->
+    <!--</root>-->
+    <!--</Loggers>-->
+    <root level="all">
+        <appender-ref ref="console"/>
+        <!--<appender-ref ref="info"/>-->
+        <!--<appender-ref ref="debug"/>-->
+        <!--<appender-ref ref="warn"/>-->
+        <appender-ref ref="error"/>
+    </root>
+
+</configuration>
