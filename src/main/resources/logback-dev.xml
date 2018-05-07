@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration>
+    <!--http://tengj.top/2017/04/05/springboot7/-->
     <!--控制台输出info级别-->
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
@@ -7,9 +8,11 @@
         </encoder>
     </appender>
 
-    <logger name="org.springframework" level="info"/>
-    <logger name="org.springframework.web.servlet.mvc" level="info" />
-    <root level="debug">
+    <logger name="org.springframework" level="error" additivity="false"/>
+    <logger name="org.hibernate.validator" level="error" additivity="false"/>
+    <logger name="springfox.documentation" level="error" additivity="false"/>
+
+    <root level="debug" additivity="false">
         <appender-ref ref="console"/>
     </root>
 
