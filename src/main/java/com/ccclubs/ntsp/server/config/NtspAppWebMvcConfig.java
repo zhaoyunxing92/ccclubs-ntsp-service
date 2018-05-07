@@ -54,7 +54,6 @@ public class NtspAppWebMvcConfig extends WebMvcConfigurerAdapter {
 
   }
 
-
   @Bean
   public HttpMessageConverters gsonJsonHttpMessageConverters() {
 
