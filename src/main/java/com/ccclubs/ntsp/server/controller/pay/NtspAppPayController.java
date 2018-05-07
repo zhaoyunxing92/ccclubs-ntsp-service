@@ -2,7 +2,9 @@ package com.ccclubs.ntsp.server.controller.pay;
 
 import com.ccclubs.ntsp.server.common.enums.ResultEnum;
 import com.ccclubs.ntsp.server.common.result.Result;
+import com.ccclubs.ntsp.server.controller.pay.form.AliPayForm;
 import com.ccclubs.ntsp.server.controller.pay.form.PayForm;
+import com.ccclubs.ntsp.server.controller.pay.form.WeChatPayForm;
 import com.ccclubs.ntsp.server.service.NTspPayService;
 import com.ccclubs.ntsp.server.util.ResultUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,8 +26,30 @@ public class NtspAppPayController {
     @Autowired
     private NTspPayService nTspPayService;
 
-    @PostMapping("/wechat")
-    public Result wechatPay(@RequestBody @Validated PayForm form) {
+    /**
+     * 微信支付
+     *
+     * @param form
+     * @return
+     */
+    @PostMapping("/wechatPay")
+    public Result wechatPay(@RequestBody @Validated WeChatPayForm form) {
+        Long amount = form.getAmount();
+        String body = form.getBody();
+        String spbillCreateIp = form.getSpbillCreateIp();
+        return ResultUtil.success(ResultEnum.PAYSUCCESS);
+    }
+
+    /**
+     * 支付宝支付
+     *
+     * @param form
+     * @return
+     */
+    @PostMapping("/aliPay")
+    public Result aliPay(@RequestBody @Validated AliPayForm form) {
+        Long amount = form.getAmount();
+        String subject = form.getSubject();
         return ResultUtil.success(ResultEnum.PAYSUCCESS);
     }
 }

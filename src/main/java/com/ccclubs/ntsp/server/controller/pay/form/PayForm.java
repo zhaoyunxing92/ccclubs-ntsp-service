@@ -19,25 +19,14 @@ import java.util.Date;
 public class PayForm extends NtspBaseForm<String> {
     private static final long serialVersionUID = -4870696143840817989L;
 
-    @NotEmpty(message = "字段body必填")
-    private String body;
     @NotNull(message = "字段amount不能为空")
-    private Double amount;
+    private Long amount;
 
-    public String getBody() {
-        return body;
-    }
-
-    public void setBody(String body) {
-        this.body = body;
-    }
-
-    public void setAmount(Double amount) {
-        this.amount = amount;
-    }
-
-    public Double getAmount() {
+    public Long getAmount() {
         return amount;
     }
 
+    public void setAmount(Long amount) {
+        this.amount = amount;
+    }
 }
