@@ -1,8 +1,8 @@
-package com.ccclubs.ntsp.server.common.enums;
+package com.ccclubs.ntsp.server.core.common.enums;
 
 /**
  * @author sunny
- * @class: com.ccclubs.ntsp.server.common.enums.ResultEnum
+ * @class: com.ccclubs.ntsp.server.core.common.enums.ResultEnum
  * @date: 2018-05-04 11:04
  * @des:
  */

@@ -1,14 +1,8 @@
 package com.ccclubs.ntsp.server.controller.pay.form;
 
-import com.ccclubs.ntsp.server.common.form.NtspBaseForm;
-import com.fasterxml.jackson.annotation.JsonFormat;
-import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.NotEmpty;
-import org.hibernate.validator.constraints.Range;
+import com.ccclubs.ntsp.server.core.common.form.NtspBaseForm;
 
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
-import java.util.Date;
 
 /**
  * @author sunny

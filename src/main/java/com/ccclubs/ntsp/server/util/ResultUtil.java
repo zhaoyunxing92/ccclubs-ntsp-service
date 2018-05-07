@@ -1,7 +1,7 @@
 package com.ccclubs.ntsp.server.util;
 
-import com.ccclubs.ntsp.server.common.enums.ResultEnum;
-import com.ccclubs.ntsp.server.common.result.Result;
+import com.ccclubs.ntsp.server.core.common.enums.ResultEnum;
+import com.ccclubs.ntsp.server.core.common.result.Result;
 import org.springframework.validation.ObjectError;
 
 import java.util.List;

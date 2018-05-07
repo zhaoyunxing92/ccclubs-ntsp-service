@@ -1,8 +1,8 @@
-package com.ccclubs.ntsp.server.config;
+package com.ccclubs.ntsp.server.core.config;
 
 /**
  * @author sunny
- * @class: com.ccclubs.ntsp.server.config.NewTspPayConfig
+ * @class: com.ccclubs.ntsp.server.core.config.NewTspPayConfig
  * @date: 2018-05-03 18:25
  * @des:
  */

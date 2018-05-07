@@ -1,10 +1,10 @@
-package com.ccclubs.ntsp.server.common.result;
+package com.ccclubs.ntsp.server.core.common.result;
 
 import java.io.Serializable;
 
 /**
  * @author sunny
- * @class: com.ccclubs.ntsp.server.common.result.Result
+ * @class: com.ccclubs.ntsp.server.core.common.result.Result
  * @date: 2018-05-04 10:55
  * @des:
  */

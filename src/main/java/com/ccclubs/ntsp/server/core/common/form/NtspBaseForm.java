@@ -1,10 +1,10 @@
-package com.ccclubs.ntsp.server.common.form;
+package com.ccclubs.ntsp.server.core.common.form;
 
 import java.io.Serializable;
 
 /**
  * @author sunny
- * @class: com.ccclubs.ntsp.server.common.form.NtspBaseForm
+ * @class: com.ccclubs.ntsp.server.core.common.form.NtspBaseForm
  * @date: 2018-05-04 10:20
  * @des:
  */

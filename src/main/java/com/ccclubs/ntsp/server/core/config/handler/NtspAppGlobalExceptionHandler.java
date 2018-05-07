@@ -1,7 +1,7 @@
-package com.ccclubs.ntsp.server.config.handler;
+package com.ccclubs.ntsp.server.core.config.handler;
 
-import com.ccclubs.ntsp.server.common.enums.ResultEnum;
-import com.ccclubs.ntsp.server.common.result.Result;
+import com.ccclubs.ntsp.server.core.common.enums.ResultEnum;
+import com.ccclubs.ntsp.server.core.common.result.Result;
 import com.ccclubs.ntsp.server.util.ResultUtil;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.converter.HttpMessageNotReadableException;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 /**
  * @author sunny
- * @class: com.ccclubs.ntsp.server.config.handler.NtspAppGlobalExceptionHandler
+ * @class: com.ccclubs.ntsp.server.core.config.handler.NtspAppGlobalExceptionHandler
  * @date: 2018-05-04 0:19
  * @des: 统一异常处理
  */

@@ -1,6 +1,6 @@
-package com.ccclubs.ntsp.server.config;
+package com.ccclubs.ntsp.server.core.config;
 
-import com.ccclubs.ntsp.server.config.interceptor.NtspAppInterceptor;
+import com.ccclubs.ntsp.server.core.config.interceptor.NtspAppInterceptor;
 import com.google.gson.GsonBuilder;
 import org.springframework.boot.autoconfigure.web.HttpMessageConverters;
 import org.springframework.context.annotation.Bean;
@@ -13,7 +13,7 @@ import org.springframework.web.servlet.mvc.WebContentInterceptor;
 
 /**
  * @author sunny
- * @class: com.ccclubs.ntsp.server.config.NtspAppWebMvcConfig
+ * @class: com.ccclubs.ntsp.server.core.config.NtspAppWebMvcConfig
  * @date: 2018-05-04 0:42
  * @des:
  */

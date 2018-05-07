@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: prod
+    active: dev
   #时间格式化
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss

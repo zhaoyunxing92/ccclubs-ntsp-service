@@ -1,8 +1,8 @@
-package com.ccclubs.ntsp.server.common.exception;
+package com.ccclubs.ntsp.server.core.common.exception;
 
 /**
  * @author sunny
- * @class: com.ccclubs.ntsp.server.common.exception.NtspBaseException
+ * @class: com.ccclubs.ntsp.server.core.common.exception.NtspBaseException
  * @date: 2018-05-04 17:31
  * @des: base异常类
  */
