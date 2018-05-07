@@ -17,41 +17,27 @@ import java.util.Date;
  * @des:
  */
 public class PayForm extends NtspBaseForm<String> {
-  private static final long serialVersionUID = -4870696143840817989L;
-  @NotNull(message = "字段【money】不能为空")
-  @Range(min = 1, max = 100, message = "金额在{min}~{max}之间")
-  private Long money;
+    private static final long serialVersionUID = -4870696143840817989L;
 
-  @NotNull(message = "字段【time】不能为空")
-  @Past(message = "时间只能是过去格式")
-  private Date time;
+    @NotEmpty(message = "字段body必填")
+    private String body;
+    @NotNull(message = "字段amount不能为空")
+    private Double amount;
 
-  @NotEmpty(message = "用户名必填")
-  @Length(max = 20, min = 6, message = "用户名在{min}~{max}之间")
-  private String username;
+    public String getBody() {
+        return body;
+    }
 
+    public void setBody(String body) {
+        this.body = body;
+    }
 
-  public Long getMoney() {
-    return money;
-  }
+    public void setAmount(Double amount) {
+        this.amount = amount;
+    }
 
-  public void setMoney(Long money) {
-    this.money = money;
-  }
+    public Double getAmount() {
+        return amount;
+    }
 
-  public Date getTime() {
-    return time;
-  }
-
-  public void setTime(Date time) {
-    this.time = time;
-  }
-
-  public String getUsername() {
-    return username;
-  }
-
-  public void setUsername(String username) {
-    this.username = username;
-  }
 }

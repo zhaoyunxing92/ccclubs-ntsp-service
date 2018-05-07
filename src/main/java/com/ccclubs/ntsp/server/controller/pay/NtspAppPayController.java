@@ -21,11 +21,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/pay")
 public class NtspAppPayController {
-  @Autowired
-  private NTspPayService nTspPayService;
+    @Autowired
+    private NTspPayService nTspPayService;
 
-  @PostMapping("/wechat")
-  public Result wechatPay(@RequestBody @Validated PayForm form) {
-    return ResultUtil.success(ResultEnum.PAYSUCCESS);
-  }
+    @PostMapping("/wechat")
+    public Result wechatPay(@RequestBody @Validated PayForm form) {
+        return ResultUtil.success(ResultEnum.PAYSUCCESS);
+    }
 }
